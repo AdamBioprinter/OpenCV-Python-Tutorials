@@ -26,3 +26,5 @@ plt.xticks([]), plt.yticks([])
 plt.subplot(122),plt.imshow(outIM, cmap='gray'),plt.title('Output')
 plt.xticks([]), plt.yticks([])
 plt.show()
+
+
