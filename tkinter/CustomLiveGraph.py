@@ -8,7 +8,6 @@ from matplotlib.figure import Figure
 import matplotlib.animation as animation
 
 from matplotlib import style
-
 import urllib
 import json
 
