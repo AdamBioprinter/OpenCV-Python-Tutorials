@@ -10,10 +10,18 @@ def get_imlist(path):
       or f.endswith('.png') or f.endswith('tif')]
 
 # resize array image using PIL object and convert back to array
+# notice this function uses uint8!
+# this may remove information from higher order images
+# consider first evaluating the data type of image, and then using appropriae conversion to numpy array
 def imresize(im,sz):
   """ Resize an image array using PIL."""
-  pil_im = Image.fromarray(uint8(im))
-
+  DataType = im.dtype
+  if DataType = 'uint8':
+    pil_im = Image.fromarray(np.uint8(im))
+  elif DataType == 'uint16':
+    pil_im = Image.fromarray(np.uint16(im))
+  else:
+    pil_im = Image.fromarray(np.uint32(im))
   return np.array(pil_im.resize(sz))
 
 def histeq(im, nbr_bins=256):
