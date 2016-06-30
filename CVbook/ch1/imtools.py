@@ -56,3 +56,13 @@ def compute_average(imlist):
 
   # return average as an unsigned 8 bit integer (0-255)
   return np.array(averageim, 'uint8')
+
+def unsharp(im, weight=0.5, sigma=10):
+  """ Gives sharpening effect to image
+      Blurring the image, then subtracting the blurred version from 
+      the original. """
+  # make sure image is numpy array
+  BlurIm = filters.gaussian_filter(im,sigma)
+  OutIm = im-BlurIm*weight
+  
+  return OutIm
