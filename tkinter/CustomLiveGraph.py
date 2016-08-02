@@ -58,6 +58,7 @@ class SeaofBTCapp(tk.Tk):
 
     # In these two lines I tried to add an icon to the top left of the window
     # Unfortunately tkinter sucks, and sucks even more on a mac or linux system because it only
+    
     # accepts .xbm files which are binarized pieces of shit. why it only accepts this, who knows.
     # strLoc = "@/~/Desktop/Digital\ Image\ processing/OpenCV-Python-Tutorial/tkinter/icons/poolbird.ico"
     #    tk.Tk.iconbitmap(self,default=strLoc)
